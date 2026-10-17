@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СУШИ ДОМ — доставка суши и роллов</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+    <div class="nav-inner">
+        <a href="#" class="logo">
+            <span class="logo-icon">🍣</span>
+            <span>СУШИ ДОМ</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#menu">Меню</a>
+            <a href="#delivery">Доставка</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <button class="nav-cart" id="cartBtn">
+            🛒 Корзина
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-badge">Доставка за 30 минут</div>
+        <h1 class="hero-title">
+            Свежие<br>
+            <span>суши и роллы</span>
+        </h1>
+        <p class="hero-desc">
+            Готовим из свежей рыбы каждый день. Доставим горячим за 30 минут или вернём деньги.
+        </p>
+        <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">Заказать сейчас</a>
+            <a href="#menu" class="btn btn-outline">Смотреть меню</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-num">30 мин</div>
+                <div class="stat-label">Доставка</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">200+</div>
+                <div class="stat-label">Блюд</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">4.9</div>
+                <div class="stat-label">Рейтинг</div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="sushi-big">🍣</div>
+        <div class="floating floating-1">🍱</div>
+        <div class="floating floating-2">🍤</div>
+        <div class="floating floating-3">🥢</div>
+    </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+    <div class="section-head">
+        <div class="section-tag">// Меню</div>
+        <h2 class="section-title">Популярные <span>роллы</span></h2>
+        <p class="section-desc">Свежие роллы и суши — от классики до авторских</p>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<!-- DELIVERY -->
+<section class="delivery" id="delivery">
+    <div class="delivery-inner">
+        <div>
+            <div class="section-tag" style="color: #ff3c5a;">// Доставка</div>
+            <h2 class="delivery-title">Доставим <span>за 30 минут</span></h2>
+            <p class="delivery-desc">
+                Работаем каждый день с 10:00 до 23:00. Бесплатная доставка от 1500 ₽ по городу.
+            </p>
+        </div>
+        <div class="delivery-steps">
+            <div class="delivery-step">
+                <div class="step-num">01</div>
+                <div class="step-title">Выбираете</div>
+                <div class="step-desc">Роллы в меню</div>
+            </div>
+            <div class="delivery-step">
+                <div class="step-num">02</div>
+                <div class="step-title">Заказываете</div>
+                <div class="step-desc">Через сайт или звонок</div>
+            </div>
+            <div class="delivery-step">
+                <div class="step-num">03</div>
+                <div class="step-title">Готовим</div>
+                <div class="step-desc">15 минут</div>
+            </div>
+            <div class="delivery-step">
+                <div class="step-num">04</div>
+                <div class="step-title">Доставляем</div>
+                <div class="step-desc">30 минут</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+    <div class="contacts-inner">
+        <h2>Остались вопросы?</h2>
+        <p>Позвоните нам или напишите в мессенджер</p>
+        <div class="contacts-links">
+            <a href="tel:+79001234567" class="contact-link">📞 +7 (900) 123-45-67</a>
+            <a href="#" class="contact-link">💬 Telegram</a>
+            <a href="#" class="contact-link">💚 WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- CART MODAL -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+        <h3>Корзина</h3>
+        <button class="cart-close" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <div class="cart-empty">Корзина пуста</div>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Итого</span>
+            <span id="cartTotal">0 ₽</span>
+        </div>
+        <button class="cart-checkout" id="checkoutBtn">Оформить заказ</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">🍣 СУШИ ДОМ</div>
+        <p class="footer-desc">Доставка суши и роллов. Готовим из свежей рыбы каждый день.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2025 СУШИ ДОМ</span>
+        <span>Доставка за 30 минут</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
